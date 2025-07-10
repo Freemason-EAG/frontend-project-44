@@ -5,3 +5,6 @@ install: #установить зависимости по package-lock.json
 
 brain-games: #запустить игру
 	node bin/brain-games.js
+
+publish: #безопасная проверка перед публикацией в npm
+	npm publish --dry-run
