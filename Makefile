@@ -10,7 +10,7 @@ publish: #безопасная проверка перед публикацие�
 	npm publish --dry-run
 
 lint:  #запустить eslint
-	npx eslint
+	npx eslint .
 
 lint-fix:  #автокоррекция
-	npx eslint --fix
+	npx eslint . --fix
