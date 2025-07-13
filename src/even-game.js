@@ -31,7 +31,9 @@ const parityCheck = (numbers) => {
 
 const evenGame = () => {
 
+    console.log("Welcome to the Brain Games!");
     const name = askName();
+    console.log(`Hello, ${name}!`);
     const numbers = [
         random(),
         random(),
