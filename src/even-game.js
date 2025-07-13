@@ -42,7 +42,7 @@ const evenGame = () => {
     for (let i = 0; i < trueAnswers.length; i++) {
 
         const num = numbers[i];
-        const answer = readlineSync.question(`Question: ${num}`);
+        const answer = readlineSync.question(`Question: ${num} `);
         console.log(`Your answer: ${answer}`);
         if (answer === trueAnswers[i]) {
 
@@ -50,7 +50,7 @@ const evenGame = () => {
 
         } else {
 
-            console.log(`${answer} is wrong answer ;(. Correct answer was ${trueAnswers[i]}.\nLet's try again, ${name}!`);
+            return console.log(`${answer} is wrong answer ;(. Correct answer was ${trueAnswers[i]}.\nLet's try again, ${name}!`);
 
         }
 
