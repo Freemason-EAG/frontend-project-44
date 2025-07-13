@@ -1,11 +1,6 @@
 import readlineSync from "readline-sync";
-import askName from "../src/cli.js";
-
-const random = () => {
-
-    return Math.floor(Math.random() * 100) + 1;
-
-};
+import askName from "../cli.js";
+import random from "../index.js";
 
 
 const parityCheck = (numbers) => {
