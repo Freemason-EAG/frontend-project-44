@@ -4,4 +4,4 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Freemason-EAG_frontend-project-44&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Freemason-EAG_frontend-project-44)
 
 ## 🎥 Demo of the Even Number Game
-[asciinema demo](https://asciinema.org/a/kuXJSauJ4TsVobYaQQBaGyAei)
+[asciinema demo](https://asciinema.org/a/KHV8dqbARn8gvsNMNAiUKBBsv)
