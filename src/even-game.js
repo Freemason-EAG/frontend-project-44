@@ -44,8 +44,7 @@ const evenGame = () => {
     for (let i = 0; i < trueAnswers.length; i++) {
 
         const num = numbers[i];
-        const answer = readlineSync.question(`Question: ${num} `);
-        console.log(`Your answer: ${answer}`);
+        const answer = readlineSync.question(`Question: ${num} \nYour answer: `);
         if (answer === trueAnswers[i]) {
 
             console.log("Correct!");
