@@ -51,7 +51,7 @@ const evenGame = () => {
 
         } else {
 
-            return console.log(`${answer} is wrong answer ;(. Correct answer was ${trueAnswers[i]}.\nLet's try again, ${name}!`);
+            return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswers[i]}'.\nLet's try again, ${name}!`);
 
         }
 
