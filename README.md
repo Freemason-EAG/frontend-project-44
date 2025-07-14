@@ -8,3 +8,6 @@
 
 ## 🎥  Demo of the Calc Game
 [asciinema demo](https://asciinema.org/a/ggnIPzfrL8YSYpPjoNiT3RWoX)
+
+## 🎥  Demo of the GCD Game
+[asciinema demo](https://asciinema.org/a/EyAydBV8pPIkz61pAYBFuDDAF)
