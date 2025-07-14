@@ -40,7 +40,7 @@ const evenGame = () => {
 
         const num = numbers[i];
         const answer = readlineSync.question(`Question: ${num} \nYour answer: `);
-        if (answer === trueAnswers[i]) {
+        if (answer.trim().toLowerCase() === trueAnswers[i]) {
 
             console.log("Correct!");
 

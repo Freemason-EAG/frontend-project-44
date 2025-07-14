@@ -57,7 +57,7 @@ const calcGame = () => {
         const answer = readlineSync.question(`Question: ${num1} ${operator} ${num2} \nYour answer: `);
 
 
-        if (Number(answer) === calcResult) {
+        if (Number(answer.trim()) === calcResult) {
 
             console.log("Correct!");
 
