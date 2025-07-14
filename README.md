@@ -5,3 +5,6 @@
 
 ## 🎥  Demo of the Even Number Game
 [asciinema demo](https://asciinema.org/a/KHV8dqbARn8gvsNMNAiUKBBsv)
+
+## 🎥  Demo of the Calc Game
+[asciinema demo](https://asciinema.org/a/ggnIPzfrL8YSYpPjoNiT3RWoX)
