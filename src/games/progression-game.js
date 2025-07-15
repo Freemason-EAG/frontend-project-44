@@ -37,7 +37,7 @@ const progressionGame = () => {
         const hiddenNum = Number(nums[index]);
         nums[index] = "..";
 
-        const answer = readlineSync.question(`Question: ${nums.join(", ")} \nYour answer: `);
+        const answer = readlineSync.question(`Question: ${nums.join(" ")} \nYour answer: `);
         if (Number(answer.trim()) === hiddenNum) {
 
             console.log("Correct!");
