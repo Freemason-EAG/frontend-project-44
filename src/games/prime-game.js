@@ -1,6 +1,5 @@
 import readlineSync from "readline-sync";
-import askName from "../cli.js";
-import random, {givenRangeRandom} from "../index.js";
+import random, {givenRangeRandom, greeting} from "../index.js";
 
 const isPrime = (num) => {
 
@@ -34,9 +33,7 @@ const isPrime = (num) => {
 
 const primeGame = () => {
 
-    console.log("Welcome to the Brain Games!");
-    const name = askName();
-    console.log(`Hello, ${name}!`);
+    const name = greeting();
 
     console.log("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
 

@@ -1,6 +1,5 @@
 import readlineSync from "readline-sync";
-import askName from "../cli.js";
-import random from "../index.js";
+import random, {greeting} from "../index.js";
 
 
 const parityCheck = (numbers) => {
@@ -26,9 +25,7 @@ const parityCheck = (numbers) => {
 
 const evenGame = () => {
 
-    console.log("Welcome to the Brain Games!");
-    const name = askName();
-    console.log(`Hello, ${name}!`);
+    const name = greeting();
     const numbers = [
         random(),
         random(),

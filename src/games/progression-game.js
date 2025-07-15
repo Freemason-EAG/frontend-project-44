@@ -1,6 +1,5 @@
 import readlineSync from "readline-sync";
-import askName from "../cli.js";
-import random, {givenRangeRandom} from "../index.js";
+import random, {givenRangeRandom, greeting} from "../index.js";
 
 const progression = () => {
 
@@ -25,9 +24,7 @@ const progression = () => {
 
 const progressionGame = () => {
 
-    console.log("Welcome to the Brain Games!");
-    const name = askName();
-    console.log(`Hello, ${name}!`);
+    const name = greeting();
 
     console.log("What number is missing in the progression?");
     for (let i = 0; i < 3; i++) {

@@ -1,6 +1,5 @@
 import readlineSync from "readline-sync";
-import askName from "../cli.js";
-import random from "../index.js";
+import random, {greeting} from "../index.js";
 
 
 const randomOperator = () => {
@@ -38,9 +37,7 @@ const calculation = (a, operator, b) => {
 
 const calcGame = () => {
 
-    console.log("Welcome to the Brain Games!");
-    const name = askName();
-    console.log(`Hello, ${name}!`);
+    const name = greeting();
 
     console.log("What is the result of the expression?");
 

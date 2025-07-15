@@ -1,6 +1,5 @@
 import readlineSync from "readline-sync";
-import askName from "../cli.js";
-import random, {givenRangeRandom} from "../index.js";
+import random, {givenRangeRandom, greeting} from "../index.js";
 
 const gcdCalculate = (a, b) => {
 
@@ -33,9 +32,7 @@ const gcdCalculate = (a, b) => {
 
 const gcdGame = () => {
 
-    console.log("Welcome to the Brain Games!");
-    const name = askName();
-    console.log(`Hello, ${name}!`);
+    const name = greeting();
 
     console.log("Find the greatest common divisor of given numbers.");
     for (let i = 0; i < 3; i++) {
