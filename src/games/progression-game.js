@@ -29,15 +29,31 @@ const progressionGame = () => {
     const name = askName();
     console.log(`Hello, ${name}!`);
 
-    const nums = progression().split(", ");
-    let num = givenRangeRandom(
-        Number(nums[0]),
-        Number(nums[nums.length - 1])
-    );
+    console.log("What number is missing in the progression?");
+    for (let i = 0; i < 3; i++) {
 
-    /*
-     * let hiddenNum = nums.length[num] = '..'
-     * мы выбрали случайно число, а нам нужно его скрыть случайным образом! Как это сделать???
-     */
+        let nums = progression().split(", ");
+        const index = givenRangeRandom(
+            0,
+            nums.length - 1
+        );
+        const hiddenNum = Number(nums[index]);
+        nums[index] = "..";
+
+        const answer = readlineSync.question(`Question: ${nums.join(", ")} \nYour answer: `);
+        if (Number(answer.trim()) === hiddenNum) {
+
+            console.log("Correct!");
+
+        } else {
+
+            return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${hiddenNum}'.\nLet's try again, ${name}!`);
+
+        }
+
+    }
+    console.log(`Congratulations, ${name}!`);
 
 };
+
+export default progressionGame;
