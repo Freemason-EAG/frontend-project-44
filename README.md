@@ -11,3 +11,6 @@
 
 ## 🎥  Demo of the GCD Game
 [asciinema demo](https://asciinema.org/a/EyAydBV8pPIkz61pAYBFuDDAF)
+
+## 🎥  Demo of the Progression Game
+[asciinema demo](https://asciinema.org/a/W0KhHupCHPkKHXsYPalYwacBx)
