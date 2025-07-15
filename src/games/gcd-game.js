@@ -1,6 +1,6 @@
 import readlineSync from "readline-sync";
 import askName from "../cli.js";
-import random from "../index.js";
+import random, {givenRangeRandom} from "../index.js";
 
 const gcdCalculate = (a, b) => {
 
@@ -30,12 +30,6 @@ const gcdCalculate = (a, b) => {
 
 };
 
-// range задает диапазон от 2 до 4
-const range = () => {
-
-    return Math.floor(Math.random() * 3) + 2;
-
-};
 
 const gcdGame = () => {
 
@@ -46,8 +40,14 @@ const gcdGame = () => {
     console.log("Find the greatest common divisor of given numbers.");
     for (let i = 0; i < 3; i++) {
 
-        let num1 = range() * random();
-        let num2 = range() * random();
+        let num1 = givenRangeRandom(
+            2,
+            4
+        ) * random();
+        let num2 = givenRangeRandom(
+            2,
+            4
+        ) * random();
         let gcdResult = gcdCalculate(
             num1,
             num2
