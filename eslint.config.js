@@ -1,20 +1,27 @@
 // eslint.config.js
-import stylistic from "@stylistic/eslint-plugin";
+import globals from 'globals'
+import js from '@eslint/js'
+import stylistic from '@stylistic/eslint-plugin'
 
 export default [
-    {
-        "plugins": {
-            "@stylistic": stylistic
-        },
-        "languageOptions": {
-            "ecmaVersion": 2022,
-            "sourceType": "module"
-        },
-        "linterOptions": {
-            "reportUnusedDisableDirectives": true
-        },
-        "rules": {
-            ...stylistic.configs.all.rules
-        }
-    }
-];
+  js.configs.recommended,
+  {
+    plugins: {
+      '@stylistic': stylistic,
+    },
+    rules: {
+      ...stylistic.configs.recommended.rules,
+    },
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      globals: globals.node,
+    },
+    linterOptions: {
+      reportUnusedDisableDirectives: true,
+    },
+  },
+  {
+    ignores: ['dist/'],
+  },
+]
