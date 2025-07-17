@@ -18,7 +18,7 @@ const progression = () => {
   return result.join(', ')
 }
 
-const progressionGame = () => {
+const startProgressionGame = () => {
   const name = greeting()
 
   console.log('What number is missing in the progression?')
@@ -42,4 +42,4 @@ const progressionGame = () => {
   console.log(`Congratulations, ${name}!`)
 }
 
-export default progressionGame
+export default startProgressionGame

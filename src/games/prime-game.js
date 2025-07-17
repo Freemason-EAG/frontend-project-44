@@ -19,7 +19,7 @@ const isPrime = (num) => {
   return true
 }
 
-const primeGame = () => {
+const startPrimeGame = () => {
   const name = greeting()
 
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
@@ -42,4 +42,4 @@ const primeGame = () => {
   console.log(`Congratulations, ${name}!`)
 }
 
-export default primeGame
+export default startPrimeGame

@@ -23,7 +23,7 @@ const gcdCalculate = (a, b) => {
   return num2
 }
 
-const gcdGame = () => {
+const startGcdGame = () => {
   const name = greeting()
 
   console.log('Find the greatest common divisor of given numbers.')
@@ -51,4 +51,4 @@ const gcdGame = () => {
   console.log(`Congratulations, ${name}!`)
 }
 
-export default gcdGame
+export default startGcdGame

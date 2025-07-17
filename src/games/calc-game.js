@@ -26,7 +26,7 @@ const calculation = (a, operator, b) => {
   return result
 }
 
-const calcGame = () => {
+const startCalcGame = () => {
   const name = greeting()
 
   console.log('What is the result of the expression?')
@@ -52,4 +52,4 @@ const calcGame = () => {
   console.log(`Congratulations, ${name}!`)
 }
 
-export default calcGame
+export default startCalcGame

@@ -14,7 +14,7 @@ const parityCheck = (numbers) => {
   return result
 }
 
-const evenGame = () => {
+const startEvenGame = () => {
   const name = greeting()
   const numbers = [
     random(),
@@ -36,4 +36,4 @@ const evenGame = () => {
   console.log(`Congratulations, ${name}!`)
 }
 
-export default evenGame
+export default startEvenGame
