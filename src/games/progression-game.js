@@ -1,6 +1,4 @@
-import readlineSync from 'readline-sync'
-import random, { givenRangeRandom } from '../index.js'
-import greeting from '../cli.js'
+import gamesEngine, { givenRangeRandom, random } from '../index.js'
 
 const progression = () => {
   const start = random()
@@ -19,28 +17,21 @@ const progression = () => {
   return result.join(', ')
 }
 
-const startProgressionGame = () => {
-  const name = greeting()
+const rules = 'What number is missing in the progression?'
 
-  console.log('What number is missing in the progression?')
-  for (let i = 0; i < 3; i++) {
+const startProgressionGame = () => {
+  const engine = () => {
     let nums = progression().split(', ')
     const index = givenRangeRandom(
       0,
       nums.length - 1,
     )
-    const hiddenNum = Number(nums[index])
+    const trueAnswer = Number(nums[index])
     nums[index] = '..'
-
-    const answer = readlineSync.question(`Question: ${nums.join(' ')} \nYour answer: `)
-    if (Number(answer.trim()) === hiddenNum) {
-      console.log('Correct!')
-    }
-    else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${hiddenNum}'.\nLet's try again, ${name}!`)
-    }
+    const question = nums.join(' ')
+    return [question, trueAnswer]
   }
-  console.log(`Congratulations, ${name}!`)
+  gamesEngine(rules, engine)
 }
 
 export default startProgressionGame

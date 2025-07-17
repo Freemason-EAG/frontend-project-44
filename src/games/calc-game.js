@@ -1,6 +1,4 @@
-import readlineSync from 'readline-sync'
-import random from '../index.js'
-import greeting from '../cli.js'
+import gamesEngine, { random } from '../index.js'
 
 const randomOperator = () => {
   const operators = [
@@ -27,30 +25,18 @@ const calculation = (a, operator, b) => {
   return result
 }
 
+const rules = 'What is the result of the expression?'
+
 const startCalcGame = () => {
-  const name = greeting()
-
-  console.log('What is the result of the expression?')
-
-  for (let i = 0; i < 3; i++) {
+  const engine = () => {
     const num1 = random()
     const num2 = random()
     const operator = randomOperator()
-    const calcResult = calculation(
-      num1,
-      operator,
-      num2,
-    )
-    const answer = readlineSync.question(`Question: ${num1} ${operator} ${num2} \nYour answer: `)
-
-    if (Number(answer.trim()) === calcResult) {
-      console.log('Correct!')
-    }
-    else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${calcResult}'.\nLet's try again, ${name}!`)
-    }
+    const question = `${num1} ${operator} ${num2}`
+    const trueAnswer = String(calculation(num1, operator, num2))
+    return [question, trueAnswer]
   }
-  console.log(`Congratulations, ${name}!`)
+  gamesEngine(rules, engine)
 }
 
 export default startCalcGame

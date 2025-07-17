@@ -1,3 +1,6 @@
+import readlineSync from 'readline-sync'
+import greeting from './cli.js'
+
 const random = () => {
   return Math.floor(Math.random() * 100) + 1
 }
@@ -7,5 +10,21 @@ const givenRangeRandom = (min, max) => {
   return range
 }
 
-export default random
-export { givenRangeRandom }
+const gamesEngine = (rules, engine) => {
+  const name = greeting()
+  console.log(rules)
+  for (let i = 0; i < 3; i++) {
+    const [question, trueAnswer] = engine()
+    const answer = readlineSync.question(`Question: ${question} \nYour answer: `)
+    if (answer.trim().toLowerCase() === String(trueAnswer).toLowerCase()) {
+      console.log('Correct!')
+    }
+    else {
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.\nLet's try again, ${name}!`)
+    }
+  }
+  console.log(`Congratulations, ${name}!`)
+}
+
+export default gamesEngine
+export { givenRangeRandom, random }

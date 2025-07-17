@@ -1,6 +1,4 @@
-import readlineSync from 'readline-sync'
-import random from '../index.js'
-import greeting from '../cli.js'
+import gamesEngine, { random } from '../index.js'
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -20,27 +18,15 @@ const isPrime = (num) => {
   return true
 }
 
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
 const startPrimeGame = () => {
-  const name = greeting()
-
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
-
-  for (let i = 0; i < 3; i++) {
-    let num = random()
+  const engine = () => {
+    let question = random()
     let trueAnswer
-    isPrime(num)
-      ? trueAnswer = 'yes'
-      : trueAnswer = 'no'
-
-    const answer = readlineSync.question(`Question: ${num} \nYour answer: `)
-    if (answer.trim().toLowerCase() === trueAnswer) {
-      console.log('Correct!')
-    }
-    else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.\nLet's try again, ${name}!`)
-    }
+    isPrime(question) ? trueAnswer = 'yes' : trueAnswer = 'no'
+    return [question, trueAnswer]
   }
-  console.log(`Congratulations, ${name}!`)
+  gamesEngine(rules, engine)
 }
-
 export default startPrimeGame
