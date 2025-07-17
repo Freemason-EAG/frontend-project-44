@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync'
-import random, { givenRangeRandom, greeting } from '../index.js'
+import random, { givenRangeRandom } from '../index.js'
+import greeting from '../cli.js'
 
 const gcdCalculate = (a, b) => {
   if (b === 0) {

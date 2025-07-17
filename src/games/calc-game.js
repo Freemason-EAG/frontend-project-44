@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync'
-import random, { greeting } from '../index.js'
+import random from '../index.js'
+import greeting from '../cli.js'
 
 const randomOperator = () => {
   const operators = [
