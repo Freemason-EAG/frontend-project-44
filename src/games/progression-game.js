@@ -1,12 +1,12 @@
-import gamesEngine, { givenRangeRandom, random } from '../index.js'
+import gamesEngine, { getRandomNumber } from '../index.js'
 
-const progression = () => {
-  const start = random()
-  const numCount = givenRangeRandom(
+const getProgression = () => {
+  const start = getRandomNumber()
+  const numCount = getRandomNumber(
     5,
     10,
   )
-  const step = givenRangeRandom(
+  const step = getRandomNumber(
     4,
     12,
   )
@@ -20,8 +20,8 @@ const progression = () => {
 const rules = 'What number is missing in the progression?'
 
 const engine = () => {
-  let nums = progression().split(', ')
-  const index = givenRangeRandom(
+  let nums = getProgression().split(', ')
+  const index = getRandomNumber(
     0,
     nums.length - 1,
   )

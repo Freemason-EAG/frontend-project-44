@@ -1,4 +1,4 @@
-import gamesEngine, { random } from '../index.js'
+import gamesEngine, { getRandomNumber } from '../index.js'
 
 const getRandomOperator = () => {
   const operators = [
@@ -24,8 +24,8 @@ const calculation = (a, operator, b) => {
 const rules = 'What is the result of the expression?'
 
 const engine = () => {
-  const num1 = random()
-  const num2 = random()
+  const num1 = getRandomNumber()
+  const num2 = getRandomNumber()
   const operator = getRandomOperator()
   const question = `${num1} ${operator} ${num2}`
   const trueAnswer = String(calculation(num1, operator, num2))

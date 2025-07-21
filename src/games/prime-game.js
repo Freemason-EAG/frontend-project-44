@@ -1,4 +1,4 @@
-import gamesEngine, { random } from '../index.js'
+import gamesEngine, { getRandomNumber } from '../index.js'
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -21,9 +21,8 @@ const isPrime = (num) => {
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 const engine = () => {
-  let question = random()
-  let trueAnswer
-  isPrime(question) ? trueAnswer = 'yes' : trueAnswer = 'no'
+  let question = getRandomNumber()
+  const trueAnswer = isPrime(question) ? 'yes' : 'no'
   return [question, trueAnswer]
 }
 

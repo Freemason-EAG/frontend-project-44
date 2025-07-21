@@ -1,4 +1,4 @@
-import gamesEngine, { givenRangeRandom, random } from '../index.js'
+import gamesEngine, { getRandomNumber } from '../index.js'
 
 const gcdCalculate = (a, b) => {
   if (b === 0) {
@@ -25,14 +25,14 @@ const gcdCalculate = (a, b) => {
 const rules = 'Find the greatest common divisor of given numbers.'
 
 const engine = () => {
-  let num1 = givenRangeRandom(
+  let num1 = getRandomNumber(
     2,
     4,
-  ) * random()
-  let num2 = givenRangeRandom(
+  ) * getRandomNumber()
+  let num2 = getRandomNumber(
     2,
     4,
-  ) * random()
+  ) * getRandomNumber()
   let question = `${num1} ${num2}`
   let trueAnswer = gcdCalculate(
     num1,
