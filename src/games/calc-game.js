@@ -11,18 +11,15 @@ const randomOperator = () => {
 }
 
 const calculation = (a, operator, b) => {
-  let result = 0
-
   if (operator === '+') {
-    result = a + b
+    return a + b
   }
   else if (operator === '-') {
-    result = a - b
+    return a - b
   }
   else if (operator === '*') {
-    result = a * b
+    return a * b
   }
-  return result
 }
 
 const rules = 'What is the result of the expression?'

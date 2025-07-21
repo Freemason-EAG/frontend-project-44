@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync'
-import greeting from './cli.js'
+import askName from './cli.js'
 
 const random = () => {
   return Math.floor(Math.random() * 100) + 1
@@ -8,6 +8,11 @@ const random = () => {
 const givenRangeRandom = (min, max) => {
   const range = Math.floor(Math.random() * (max - min + 1)) + min
   return range
+}
+
+const greeting = () => {
+  console.log('Welcome to the Brain Games!')
+  askName()
 }
 
 const gamesEngine = (rules, engine) => {
@@ -27,4 +32,4 @@ const gamesEngine = (rules, engine) => {
 }
 
 export default gamesEngine
-export { givenRangeRandom, random }
+export { givenRangeRandom, random, greeting }
