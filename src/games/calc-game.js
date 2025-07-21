@@ -11,14 +11,13 @@ const randomOperator = () => {
 }
 
 const calculation = (a, operator, b) => {
-  if (operator === '+') {
-    return a + b
-  }
-  else if (operator === '-') {
-    return a - b
-  }
-  else if (operator === '*') {
-    return a * b
+  switch (operator) {
+    case '+':
+      return a + b
+    case '-':
+      return a - b
+    case '*':
+      return a * b
   }
 }
 

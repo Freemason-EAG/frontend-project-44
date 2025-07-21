@@ -12,7 +12,7 @@ const givenRangeRandom = (min, max) => {
 
 const greeting = () => {
   console.log('Welcome to the Brain Games!')
-  askName()
+  return askName()
 }
 
 const gamesEngine = (rules, engine) => {
