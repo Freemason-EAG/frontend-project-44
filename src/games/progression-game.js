@@ -19,19 +19,18 @@ const progression = () => {
 
 const rules = 'What number is missing in the progression?'
 
-const startProgressionGame = () => {
-  const engine = () => {
-    let nums = progression().split(', ')
-    const index = givenRangeRandom(
-      0,
-      nums.length - 1,
-    )
-    const trueAnswer = Number(nums[index])
-    nums[index] = '..'
-    const question = nums.join(' ')
-    return [question, trueAnswer]
-  }
-  gamesEngine(rules, engine)
+const engine = () => {
+  let nums = progression().split(', ')
+  const index = givenRangeRandom(
+    0,
+    nums.length - 1,
+  )
+  const trueAnswer = Number(nums[index])
+  nums[index] = '..'
+  const question = nums.join(' ')
+  return [question, trueAnswer]
 }
+
+const startProgressionGame = () => gamesEngine(rules, engine)
 
 export default startProgressionGame

@@ -1,6 +1,6 @@
 import gamesEngine, { random } from '../index.js'
 
-const randomOperator = () => {
+const getRandomOperator = () => {
   const operators = [
     '+',
     '-',
@@ -23,16 +23,15 @@ const calculation = (a, operator, b) => {
 
 const rules = 'What is the result of the expression?'
 
-const startCalcGame = () => {
-  const engine = () => {
-    const num1 = random()
-    const num2 = random()
-    const operator = randomOperator()
-    const question = `${num1} ${operator} ${num2}`
-    const trueAnswer = String(calculation(num1, operator, num2))
-    return [question, trueAnswer]
-  }
-  gamesEngine(rules, engine)
+const engine = () => {
+  const num1 = random()
+  const num2 = random()
+  const operator = getRandomOperator()
+  const question = `${num1} ${operator} ${num2}`
+  const trueAnswer = String(calculation(num1, operator, num2))
+  return [question, trueAnswer]
 }
+
+const startCalcGame = () => gamesEngine(rules, engine)
 
 export default startCalcGame

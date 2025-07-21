@@ -24,24 +24,23 @@ const gcdCalculate = (a, b) => {
 
 const rules = 'Find the greatest common divisor of given numbers.'
 
-const startGcdGame = () => {
-  const engine = () => {
-    let num1 = givenRangeRandom(
-      2,
-      4,
-    ) * random()
-    let num2 = givenRangeRandom(
-      2,
-      4,
-    ) * random()
-    let question = `${num1} ${num2}`
-    let trueAnswer = gcdCalculate(
-      num1,
-      num2,
-    )
-    return [question, trueAnswer]
-  }
-  gamesEngine(rules, engine)
+const engine = () => {
+  let num1 = givenRangeRandom(
+    2,
+    4,
+  ) * random()
+  let num2 = givenRangeRandom(
+    2,
+    4,
+  ) * random()
+  let question = `${num1} ${num2}`
+  let trueAnswer = gcdCalculate(
+    num1,
+    num2,
+  )
+  return [question, trueAnswer]
 }
+
+const startGcdGame = () => gamesEngine(rules, engine)
 
 export default startGcdGame

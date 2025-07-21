@@ -20,13 +20,13 @@ const isPrime = (num) => {
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
-const startPrimeGame = () => {
-  const engine = () => {
-    let question = random()
-    let trueAnswer
-    isPrime(question) ? trueAnswer = 'yes' : trueAnswer = 'no'
-    return [question, trueAnswer]
-  }
-  gamesEngine(rules, engine)
+const engine = () => {
+  let question = random()
+  let trueAnswer
+  isPrime(question) ? trueAnswer = 'yes' : trueAnswer = 'no'
+  return [question, trueAnswer]
 }
+
+const startPrimeGame = () => gamesEngine(rules, engine)
+
 export default startPrimeGame
