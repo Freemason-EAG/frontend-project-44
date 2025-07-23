@@ -20,8 +20,8 @@ const getProgression = () => {
 
 const rules = 'What number is missing in the progression?'
 
-const engine = () => {
-  let nums = getProgression().split(', ')
+const getRoundData = () => {
+  const nums = getProgression().split(', ')
   const index = getRandomNumber(
     0,
     nums.length - 1,
@@ -32,6 +32,6 @@ const engine = () => {
   return [question, trueAnswer]
 }
 
-const startProgressionGame = () => gamesEngine(rules, engine)
+const startProgressionGame = () => gamesEngine(rules, getRoundData)
 
 export default startProgressionGame

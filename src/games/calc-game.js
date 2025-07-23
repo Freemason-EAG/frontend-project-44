@@ -7,7 +7,7 @@ const getRandomOperator = () => {
     '-',
     '*',
   ]
-  const index = Math.floor(Math.random() * operators.length)
+  const index = getRandomNumber(0, operators.length - 1)
   return operators[index]
 }
 
@@ -26,7 +26,7 @@ const calculation = (a, operator, b) => {
 
 const rules = 'What is the result of the expression?'
 
-const engine = () => {
+const getRoundData = () => {
   const num1 = getRandomNumber()
   const num2 = getRandomNumber()
   const operator = getRandomOperator()
@@ -35,6 +35,6 @@ const engine = () => {
   return [question, trueAnswer]
 }
 
-const startCalcGame = () => gamesEngine(rules, engine)
+const startCalcGame = () => gamesEngine(rules, getRoundData)
 
 export default startCalcGame

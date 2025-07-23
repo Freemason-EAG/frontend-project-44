@@ -5,13 +5,13 @@ const isEven = num => num % 2 === 0
 
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".'
 
-const engine = () => {
+const getRoundData = () => {
   const question = getRandomNumber()
 
   const trueAnswer = isEven(question) ? 'yes' : 'no'
   return [question, trueAnswer]
 }
 
-const startEvenGame = () => gamesEngine(rules, engine)
+const startEvenGame = () => gamesEngine(rules, getRoundData)
 
 export default startEvenGame
