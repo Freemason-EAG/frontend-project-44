@@ -1,4 +1,5 @@
-import gamesEngine, { getRandomNumber } from '../index.js'
+import gamesEngine from '../index.js'
+import getRandomNumber from '../random.js'
 
 const getRandomOperator = () => {
   const operators = [
@@ -18,6 +19,8 @@ const calculation = (a, operator, b) => {
       return a - b
     case '*':
       return a * b
+    default:
+      throw new Error(`Unknown operator: '${operator}'`)
   }
 }
 

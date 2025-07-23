@@ -1,16 +1,9 @@
 import readlineSync from 'readline-sync'
-import askName from './cli.js'
-
-const getRandomNumber = (min = 1, max = 100) =>
-  Math.floor(Math.random() * (max - min + 1)) + min
-
-const greeting = () => {
-  console.log('Welcome to the Brain Games!')
-  return askName()
-}
 
 const gamesEngine = (rules, engine) => {
-  const name = greeting()
+  console.log('Welcome to the Brain Games!')
+  const name = readlineSync.question('May I have your name? ')
+  console.log(`Hello, ${name}!`)
   console.log(rules)
   for (let i = 0; i < 3; i++) {
     const [question, trueAnswer] = engine()
@@ -26,4 +19,3 @@ const gamesEngine = (rules, engine) => {
 }
 
 export default gamesEngine
-export { getRandomNumber, greeting }
